@@ -7,7 +7,7 @@ require 'sentry/helper'
 module Cinch
   module Plugins
     module Sentry
-      class Reddit
+      class Videos
         include Cinch::Plugin
         include Twitter::Extractor
 
