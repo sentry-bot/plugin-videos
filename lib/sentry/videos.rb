@@ -1,1 +1,0 @@
-require 'sentry/videos/version'
