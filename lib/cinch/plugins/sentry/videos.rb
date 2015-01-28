@@ -2,6 +2,7 @@ require 'cinch'
 require 'video_info'
 require 'twitter-text'
 require 'uri'
+require 'chronic_duration'
 require 'sentry/helper'
 
 module Cinch
@@ -46,15 +47,15 @@ module Cinch
                 # Check if it is a link to a live video
                 if video.duration == 0 and video.provider.eql? "YouTube"
                   m.reply("[%s] %s (%s)" % [
-                    Format(:green, info.provider),
-                    Format(:bold, info.title),
+                    Format(:green, video.provider),
+                    Format(:bold, video.title),
                     Format(:orange, "LIVE")
                   ])
                 else
                   m.reply("[%s] %s (duration: %s)" % [
-                    Format(:green, info.provider),
-                    Format(:bold, info.title),
-                    Format(:teal, ChronicDuration.output(info.duration))
+                    Format(:green, video.provider),
+                    Format(:bold, video.title),
+                    Format(:teal, ChronicDuration.output(video.duration))
                   ])
                 end
               rescue Exception => e
