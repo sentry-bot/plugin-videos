@@ -23,6 +23,12 @@ module Cinch
           # Exctract urls
           urls = extract_urls(m.message)
 
+          # Set the API keys
+          VideoInfo.provider_api_keys = {
+            youtube: config["youtube"],
+            vimeo: config["vimeo"]
+          }
+
           # Go through all links
           urls.each do |url|
             # Parse the url
