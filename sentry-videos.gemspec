@@ -16,10 +16,10 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'bundler', '~> 1.0'
 
-  gem.add_dependency "cinch"
-  gem.add_dependency "video_info"
-  gem.add_dependency "chronic"
-  gem.add_dependency "chronic_duration"
-  gem.add_dependency "twitter-text"
-  gem.add_dependency "sentry-helper"
+  gem.add_dependency "cinch", "~> 2.0"
+  gem.add_dependency "video_info", "~> 2.5"
+  gem.add_dependency "chronic", "~> 0.10"
+  gem.add_dependency "chronic_duration", "~> 0.10"
+  gem.add_dependency "twitter-text", "~> 1.13"
+  gem.add_dependency "sentry-helper", "~> 0.1.0"
 end
